@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Directory from './component/directory/directory.component';
 
-function App() {
+const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: 'hats',
+      imageUrl: 'https://robohash.org/1?set=set4&size=340x340',
+    },
+    {
+      id: 2,
+      title: 'jackets',
+      imageUrl: 'https://robohash.org/2?set=set4&size=340x340',
+    },
+    {
+      id: 3,
+      title: 'sneakers',
+      imageUrl: 'https://robohash.org/3?set=set4&size=340x340',
+    },
+    {
+      id: 4,
+      title: 'womens',
+      imageUrl: 'https://robohash.org/4?set=set4&size=340x340',
+    },
+    {
+      id: 5,
+      title: 'mens',
+      imageUrl: 'https://robohash.org/5?set=set4&size=340x340',
+    },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Directory categories={categories} />
   );
 }
 
